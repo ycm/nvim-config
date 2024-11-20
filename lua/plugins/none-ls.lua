@@ -9,7 +9,7 @@ return {
             },
         })
         vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
-        vim.keymap.set('n', '<C-s>', function()
+        vim.keymap.set({ 'n', 'i' }, '<C-s>', function()
             vim.cmd(':w')
             vim.lsp.buf.format()
         end, {})
