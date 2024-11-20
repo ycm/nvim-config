@@ -34,6 +34,7 @@ return {
 			        suppress_diagnostics(client) -- Disable linting diagnostics
 			    end,
 			})
+            -- lspconfig.clangd.setup({})
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
