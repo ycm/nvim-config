@@ -1,15 +1,15 @@
 --[[
 -- Preview:
--- TODO:
--- WARN:
+-- TODO: some todo text
+-- WARN: some warning text
 --    WARNING:
 --    HACK:
--- PERF:
--- NOTE:
+-- PERF: some perf text
+-- NOTE: some note text
 --   INFO:
--- TEST:
--- FIX:
--- DEBUG:
+-- TEST: some test text
+-- FIX: some fix text
+-- DEBUG: some debug text
 --]]
 
 return {
@@ -23,7 +23,7 @@ return {
                 alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE' }, -- a set of other keywords that all map to this FIX keywords
                 -- signs = false, -- configure signs for some keywords individually
             },
-            TODO = { icon = '󰏪', color = 'info' },
+            TODO = { icon = '󰏪', color = 'custom_todo' },
             HACK = {
                 icon = '󰇥 ',
                 color = 'custom_warn',
@@ -52,12 +52,12 @@ return {
         },
         colors = {
             error = { 'DiagError', 'ErrorMsg', '#DC2626' },
-            info = { 'DiagInfo', '#2563EB' },
-            custom_warn = { 'DiagWarn', '#FCAB10' },
+            custom_todo = { 'DiagTodo', '#2563EB' },
+            custom_warn = { 'DiagWarn', '#B34D00' },
             custom_perf = { 'DiagPerf', '#467D1C' },
             custom_test = { 'DiagTest', '#7D2E68' },
-            custom_hint = { 'DiagHint', '#8FB8DE' },
-            custom_debug = { 'DiagDebug', '#3A606E' },
+            custom_hint = { 'DiagHint', '#5E5E5E' },
+            custom_debug = { 'DiagDebug', '#C800FF' },
             default = { 'Identifier', '#7C3AED' },
         },
     },
