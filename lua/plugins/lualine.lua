@@ -7,5 +7,5 @@ return {
             --theme = 'base16'
             --}
         })
-    end
+    end,
 }

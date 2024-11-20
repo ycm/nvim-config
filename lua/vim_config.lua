@@ -17,4 +17,3 @@ vim.cmd('set relativenumber')
 vim.cmd('set signcolumn=yes')
 
 vim.cmd('set clipboard=unnamedplus')
-
