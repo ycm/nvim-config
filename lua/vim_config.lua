@@ -20,4 +20,5 @@ vim.cmd('set signcolumn=yes')
 vim.cmd('set cursorline')
 vim.cmd('set guicursor=a:blinkon100')
 
+-- system clipboard
 vim.cmd('set clipboard=unnamedplus')

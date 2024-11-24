@@ -7,11 +7,13 @@
 -- WARN: some warning text
 --    WARNING:
 --    HACK:
+-- ASSERT: my assert
 -- NOTE: some note text
 --   INFO:
 -- TEST: some test text
 -- FIX: some fix text
 -- DEBUG: some debug text
+--
 --]]
 
 return {
@@ -50,6 +52,7 @@ return {
                 color = 'custom_debug',
                 alt = { 'LOGGING', 'LOG' },
             },
+            ASSERT = { icon = '', color = 'custom_assert' },
         },
         colors = {
             error = { 'DiagError', 'ErrorMsg', '#DC2626' },
@@ -59,7 +62,11 @@ return {
             custom_test = { 'DiagTest', '#7D2E68' },
             custom_hint = { 'DiagHint', '#5E5E5E' },
             custom_debug = { 'DiagDebug', '#C800FF' },
+            custom_assert = { 'DiagAssert', '#766617' },
             default = { 'Identifier', '#7C3AED' },
+        },
+        highlight = {
+            pattern = { [[.*<(KEYWORDS)\s*:]] },
         },
     },
 }
