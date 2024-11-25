@@ -16,3 +16,5 @@ require('lazy').setup('plugins')
 
 require('keymaps')
 require('colorscheme')
+
+-- vim.cmd('source ~/.config/nvim/synstack.vim')
