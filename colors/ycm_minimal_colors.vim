@@ -13,26 +13,65 @@ hi CursorLine           guibg=#eeeeee
 hi CursorLineNR         gui=none
 hi Visual               guibg=#cbe8f2
 
+hi String                      guifg=#870087
+hi link Character              String
+hi link @string.escape         String
+hi link @string.regexp         String
+hi link @character.special     String
+hi link @punctuation.special   String
+hi link @punctuation.delimiter String
+
+hi Keyword                guifg=#d70000
+hi link Boolean           Keyword
+hi link @type.builtin     Keyword
+hi link @constant.builtin Keyword
+hi link @variable.builtin Keyword  
+hi link @type             Keyword 
+hi link @function.builtin Keyword  
+hi link @tag              Keyword
+
 hi File guifg=#222222
 
-hi String guifg=#870087
-hi Character guifg=#870087
-hi Keyword guifg=#d70000
-hi Boolean guifg=#d70000
 hi Identifier guifg=none
+
 hi Function guifg=none
+
 hi Directory guifg=#222222
+
 hi Number guifg=#005fff
 
-hi @string.escape guifg=#870087
 hi @label guifg=none
-hi @type.builtin guifg=#d70000
-hi @constant.builtin guifg=#d70000
 hi @constructor guifg=#222222
-hi @variable.builtin guifg=#d70000
-hi @type            guifg=#d70000
 
-hi NvimTreeExecFile guifg=#222222
-hi NvimTreeImageFile guifg=none
-hi NvimTreeRootFolder guifg=none
+hi @tag.attribute guifg=none
+
+hi! link PmenuSel Visual
+
+hi NvimTreeExecFile    guifg=#222222
+hi NvimTreeImageFile   guifg=none
+hi NvimTreeRootFolder  guifg=none
 hi NvimTreeSpecialFile guifg=none
+
+hi NotifyINFOBorder     guifg=#79740e 
+hi link NotifyINFOIcon  NotifyINFOBorder
+hi link NotifyINFOTitle NotifyINFOBorder
+
+" ✗  unstaged
+hi! NvimTreeGitDirtyIcon guifg=#914F1E
+
+" ✓  staged
+hi! NvimTreeGitStagedIcon guifg=#347928
+
+"   unmerged
+
+" ➜  renamed
+
+" ★  untracked
+hi! link NvimTreeGitNewIcon NvimTreeGitStagedIcon
+
+"   deleted
+hi! NvimTreeGitDeletedIcon guifg=#d70000
+
+" ◌  ignored
+" hi! NvimTreeGitIgnoredIcon guifg=#d70000
+
