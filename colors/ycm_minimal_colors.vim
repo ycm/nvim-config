@@ -16,6 +16,7 @@ hi Visual               guibg=#cbe8f2
 hi String                      guifg=#870087
 hi link Character              String
 hi link @string.escape         String
+hi link @string.special        String
 hi link @string.regexp         String
 hi link @character.special     String
 hi link @punctuation.special   String
@@ -29,6 +30,8 @@ hi link @variable.builtin Keyword
 hi link @type             Keyword 
 hi link @function.builtin Keyword  
 hi link @tag              Keyword
+
+" hi link @keyword.directive Comment -> apparent collision between shebangs and #ifndef, etc
 
 hi File guifg=#222222
 
@@ -74,4 +77,12 @@ hi! NvimTreeGitDeletedIcon guifg=#d70000
 
 " ◌  ignored
 " hi! NvimTreeGitIgnoredIcon guifg=#d70000
+
+" butano
+autocmd FileType cpp,cpphdr syn match ButanoAssert /\<BN_ASSERT\>/
+autocmd FileType cpp,cpphdr syn match ButanoError /\<BN_ERROR\>/
+autocmd FileType cpp,cpphdr syn match ButanoLog /\<BN_LOG\>/
+autocmd FileType cpp,cpphdr hi ButanoAssert guibg=#f9c509 gui=bold,italic
+autocmd FileType cpp,cpphdr hi ButanoError guibg=#f74f4a gui=bold,italic
+autocmd FileType cpp,cpphdr hi ButanoLog guibg=#8ef2c3 gui=bold,italic
 
