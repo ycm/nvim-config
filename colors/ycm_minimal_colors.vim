@@ -33,6 +33,7 @@ hi link @tag              Keyword
 
 " hi link @keyword.directive Comment -> apparent collision between shebangs and #ifndef, etc
 
+hi @variable.member  gui=none
 hi File guifg=#222222
 
 hi Identifier guifg=none
