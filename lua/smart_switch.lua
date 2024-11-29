@@ -1,8 +1,12 @@
-local M = {}
+local smart_switch = {}
 
-function M.smart_switch(key)
+function smart_switch.smart_switch(key)
     local mode = vim.api.nvim_get_mode().mode
     local buftype = vim.bo.buftype
+
+    if mode == 'i' then
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, true, true), "i", true)
+    end
     if buftype == 'terminal' and mode == 't' then
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-\\><C-n>', true, true, true), 'n', true)
     end
@@ -14,4 +18,4 @@ function M.smart_switch(key)
     end
 end
 
-return M
+return smart_switch

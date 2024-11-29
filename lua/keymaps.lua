@@ -1,11 +1,20 @@
 local k = vim.keymap
 local ss = require('smart_switch')
 
--- smart window movement
-k.set({ 'n', 't' }, '<C-h>', function() ss.smart_switch('h') end, { noremap = true })
-k.set({ 'n', 't' }, '<C-j>', function() ss.smart_switch('j') end, { noremap = true })
-k.set({ 'n', 't' }, '<C-k>', function() ss.smart_switch('k') end, { noremap = true })
-k.set({ 'n', 't' }, '<C-l>', function() ss.smart_switch('l') end, { noremap = true })
+--[[
+smart(er) window movement
+    functionality:
+        currently in INSERT mode: exits into NORMAL mode and jumps windows
+        currently in NORMAL mode: jumps windows as usual
+        currently in NORMAL mode in a terminal buffer: jumps windows as usual
+        currently in TERMINAL mode in a terminal buffer: exits into NORMAL mode and jumps windows
+
+        finally, if jumping INTO a terminal buffer, enters TERMINAL mode.
+--]]
+k.set({ 'i', 'n', 't' }, '<C-h>', function() ss.smart_switch('h') end, { noremap = true })
+k.set({ 'i', 'n', 't' }, '<C-j>', function() ss.smart_switch('j') end, { noremap = true })
+k.set({ 'i', 'n', 't' }, '<C-k>', function() ss.smart_switch('k') end, { noremap = true })
+k.set({ 'i', 'n', 't' }, '<C-l>', function() ss.smart_switch('l') end, { noremap = true })
 
 --clear search highlight
 k.set('n', '<leader>/', ':noh<CR>')
@@ -27,3 +36,14 @@ k.set('n', '<leader>tl', ':belowright vsplit | term<cr>i')
 
 --terminal escape
 k.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true })
+
+--format
+k.set('n', '<leader>gf', vim.lsp.buf.format, {})
+
+--save and format (don't explicitly exit insert mode)
+k.set({ 'n', 'i', 't' }, '<C-s>', function()
+    if vim.bo.buftype ~= 'terminal' then
+        vim.cmd(':w')
+        vim.lsp.buf.format()
+    end
+end, {})

@@ -8,10 +8,12 @@ let g:colors_name = "ycm_minimal_colors"
 
 set background=light
 
-hi Normal               guifg=#222222 guibg=none
-hi CursorLine           guibg=#eeeeee
-hi CursorLineNR         gui=none
-hi Visual               guibg=#cbe8f2
+hi Normal                      guifg=#222222 guibg=none
+hi CursorLine                  guibg=#eeeeee
+hi CursorLineNR                gui=none
+hi Visual                      guibg=#cbe8f2
+
+hi Folded                      guibg=#fce5f9
 
 hi String                      guifg=#870087
 hi link Character              String
@@ -22,14 +24,14 @@ hi link @character.special     String
 hi link @punctuation.special   String
 hi link @punctuation.delimiter String
 
-hi Keyword                guifg=#d70000
-hi link Boolean           Keyword
-hi link @type.builtin     Keyword
-hi link @constant.builtin Keyword
-hi link @variable.builtin Keyword  
-hi link @type             Keyword 
-hi link @function.builtin Keyword  
-hi link @tag              Keyword
+hi Keyword                     guifg=#d70000
+hi link Boolean                Keyword
+hi link @type.builtin          Keyword
+hi link @constant.builtin      Keyword
+hi link @variable.builtin      Keyword  
+hi link @type                  Keyword 
+hi link @function.builtin      Keyword  
+hi link @tag                   Keyword
 
 " hi link @keyword.directive Comment -> apparent collision between shebangs and #ifndef, etc
 
@@ -86,4 +88,3 @@ autocmd FileType cpp,cpphdr syn match ButanoLog /\<BN_LOG\>/
 autocmd FileType cpp,cpphdr hi ButanoAssert guibg=#f9c509 gui=bold,italic
 autocmd FileType cpp,cpphdr hi ButanoError guibg=#f74f4a gui=bold,italic
 autocmd FileType cpp,cpphdr hi ButanoLog guibg=#8ef2c3 gui=bold,italic
-
