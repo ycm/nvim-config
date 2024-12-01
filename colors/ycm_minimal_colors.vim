@@ -15,6 +15,11 @@ hi Visual                      guibg=#cbe8f2
 
 hi Folded                      guibg=#fce5f9
 
+
+hi link IncSearch CurSearch
+hi Search    ctermfg=15 ctermbg=3 guifg=#222222 guibg=NvimLightYellow
+hi CurSearch ctermfg=15 ctermbg=3 guifg=#222222 guibg=#ace2cb
+
 hi String                      guifg=#870087
 hi link Character              String
 hi link @string.escape         String
@@ -88,3 +93,16 @@ autocmd FileType cpp,cpphdr syn match ButanoLog /\<BN_LOG\>/
 autocmd FileType cpp,cpphdr hi ButanoAssert guibg=#f9c509 gui=bold,italic
 autocmd FileType cpp,cpphdr hi ButanoError guibg=#f74f4a gui=bold,italic
 autocmd FileType cpp,cpphdr hi ButanoLog guibg=#8ef2c3 gui=bold,italic
+
+" todo comments
+hi! TodoBgTEST     gui=bold,italic guifg=#ffffff guibg=#7d2e68
+hi! TodoBgPERF     gui=bold,italic guifg=#ffffff guibg=#7c3aed
+hi! TodoBgNOTE     gui=bold,italic guifg=#ffffff guibg=#5e5e5e
+hi! TodoBgDONE     gui=bold,italic guifg=#ffffff guibg=#467d1c
+hi! TodoBgWARN     gui=bold,italic guifg=#ffffff guibg=#b34d00
+hi! TodoBgHACK     gui=bold,italic guifg=#ffffff guibg=#b34d00
+hi! TodoBgTODO     gui=bold,italic guifg=#ffffff guibg=#2563eb
+hi! TodoBgDEBUG    gui=bold,italic guifg=#ffffff guibg=#c800ff
+hi! TodoBgFIX      gui=bold,italic guifg=#ffffff guibg=#590008
+hi! TodoBgASSERT   gui=bold,italic guifg=#ffffff guibg=#766617
+

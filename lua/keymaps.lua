@@ -29,10 +29,10 @@ k.set('n', '<leader>sh', ':ClangdSwitchSourceHeader<CR>')
 k.set('n', '<leader>zf', 'v%zf')
 
 --terminal split
-k.set('n', '<leader>th', ':vsplit | term<cr>i')
-k.set('n', '<leader>tj', ':belowright split | term<cr>i')
-k.set('n', '<leader>tk', ':split | term<cr>i')
-k.set('n', '<leader>tl', ':belowright vsplit | term<cr>i')
+k.set('n', '<leader>th', ':vsplit | term<cr>:vertical resize 60<cr>i')
+k.set('n', '<leader>tj', ':belowright split | term<cr>:resize 12<cr>i')
+k.set('n', '<leader>tk', ':split | term<cr>:resize 12<cr>i')
+k.set('n', '<leader>tl', ':belowright vsplit | term<cr>:vertical resize 60<cr>i')
 
 --terminal escape
 k.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true })

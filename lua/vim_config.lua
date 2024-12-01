@@ -13,7 +13,7 @@ vim.cmd('set shiftwidth=4')
 vim.g.mapleader = ' '
 
 vim.cmd('set number')
-vim.cmd('set relativenumber')
+-- vim.cmd('set relativenumber')
 vim.cmd('set signcolumn=yes')
 
 -- cursor
@@ -22,4 +22,3 @@ vim.cmd('set guicursor=a:blinkon100')
 
 -- system clipboard
 vim.cmd('set clipboard=unnamedplus')
-
