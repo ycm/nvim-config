@@ -18,7 +18,7 @@ vim.cmd('set signcolumn=yes')
 
 -- cursor
 vim.cmd('set cursorline')
-vim.cmd('set guicursor=a:blinkon100')
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 -- system clipboard
 vim.cmd('set clipboard=unnamedplus')
